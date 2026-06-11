@@ -4,382 +4,418 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Southwest Precast Concrete | Melbourne Commercial Construction</title>
+    <meta name="description" content="Melbourne's precision precast concrete specialists. Tilt-up panels, warehouse builds, structural elements and bulk excavation delivered on time, every time.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="https://v3b.fal.media/files/b/0a9ddf81/LWu-SP8dgXZ_KQg7-S0Hw_8wkccIZK.png" alt="Southwest Precast Concrete Logo" class="logo-img">
+            <a href="#home" class="nav-logo">
+                <img src="https://v3b.fal.media/files/b/0a9ddf81/LWu-SP8dgXZ_KQg7-S0Hw_8wkccIZK.png" alt="Southwest Precast" class="logo-img">
                 <span class="logo-text">Southwest Precast</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
-                <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
-                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services-section" class="nav-link">Services</a></li>
+                <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <a href="#contact-section" class="cta-nav">Get a Quote</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- HOME PAGE -->
-    <section id="home" class="page active">
-        <!-- Hero Section -->
-        <div class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Building Tomorrow's<br><span class="accent-text">Infrastructure</span></h1>
-                <p class="hero-subtitle">Premium precast concrete solutions for commercial construction across Melbourne</p>
-                <button class="cta-button" onclick="navigateTo('services')">Explore Services</button>
-            </div>
-            <div class="hero-background">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80" alt="Construction site" class="hero-bg-img">
+    <!-- ===========================
+         HERO
+    =========================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80" alt="Construction site" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="eyebrow">Melbourne's Commercial Concrete Specialists</p>
+            <h1 class="hero-heading">
+                Most project delays start<br>
+                <em>before</em> a wall goes up.
+            </h1>
+            <p class="hero-sub">
+                Southwest Precast delivers precision-built panels, structural elements and full commercial builds — factory-controlled, site-ready, always on programme.
+            </p>
+            <div class="hero-ctas">
+                <a href="#contact-section" class="btn-primary">Get a Free Quote</a>
+                <a href="#services-section" class="btn-ghost">Explore Services</a>
             </div>
         </div>
 
-        <!-- Services Overview Section -->
-        <section class="services-preview">
-            <h2>Our Core Services</h2>
-            <div class="services-grid">
-                <div class="service-card-mini" onclick="navigateTo('services'); setTimeout(()=>document.getElementById('svc-commercial').scrollIntoView({behavior:'smooth'}),150)">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=250&fit=crop&q=80" alt="Commercial Construction">
-                    <h3>Commercial Construction</h3>
-                    <p>Large-scale commercial projects built with precision</p>
-                    <span class="card-cta">Learn More →</span>
-                </div>
-                <div class="service-card-mini" onclick="navigateTo('services'); setTimeout(()=>document.getElementById('svc-warehouse').scrollIntoView({behavior:'smooth'}),150)">
-                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&h=250&fit=crop&q=80" alt="Warehouse Buildings">
-                    <h3>Warehouse Buildings</h3>
-                    <p>Robust warehouse solutions for modern logistics</p>
-                    <span class="card-cta">Learn More →</span>
-                </div>
-                <div class="service-card-mini" onclick="navigateTo('services'); setTimeout(()=>document.getElementById('svc-precast').scrollIntoView({behavior:'smooth'}),150)">
-                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=250&fit=crop&q=80" alt="Precast Panels">
-                    <h3>Precast Panels</h3>
-                    <p>High-quality prefabricated panel systems</p>
-                    <span class="card-cta">Learn More →</span>
-                </div>
-                <div class="service-card-mini" onclick="navigateTo('services'); setTimeout(()=>document.getElementById('svc-onsite').scrollIntoView({behavior:'smooth'}),150)">
-                    <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=250&fit=crop&q=80" alt="Onsite Panels">
-                    <h3>Onsite Panels</h3>
-                    <p>Custom solutions fabricated on your site</p>
-                    <span class="card-cta">Learn More →</span>
-                </div>
-                <div class="service-card-mini" onclick="navigateTo('services'); setTimeout(()=>document.getElementById('svc-excavation').scrollIntoView({behavior:'smooth'}),150)">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop&q=80" alt="Bulk Excavation">
-                    <h3>Bulk Excavation</h3>
-                    <p>Professional excavation and site preparation</p>
-                    <span class="card-cta">Learn More →</span>
-                </div>
-            </div>
-        </section>
+        <!-- Cycling service preview — bottom right -->
+        <div class="hero-preview-strip" id="heroStrip">
+            <p class="strip-label">What we build</p>
+            <div class="preview-item active">Precast Wall Panels</div>
+            <div class="preview-item">Warehouse Construction</div>
+            <div class="preview-item">Structural Columns &amp; Beams</div>
+            <div class="preview-item">Architectural Facades</div>
+            <div class="preview-item">Bulk Excavation</div>
+        </div>
 
-        <!-- Why Choose Us Section -->
-        <section class="why-choose">
-            <h2>Why Choose Southwest Precast?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>15+ Years Experience</h3>
-                    <p>Proven track record in Melbourne's commercial construction sector</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>Premium Quality</h3>
-                    <p>Every project meets the highest industry standards and specifications</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>On-Time Delivery</h3>
-                    <p>We respect your timeline and keep projects on schedule</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>Expert Team</h3>
-                    <p>Skilled engineers and construction professionals</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>Custom Solutions</h3>
-                    <p>Tailored designs that fit your specific project needs</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <h3>Sustainable Practices</h3>
-                    <p>Environmentally conscious construction methods</p>
-                </div>
-            </div>
-        </section>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <!-- SERVICES PAGE -->
-    <section id="services" class="page">
-        <div class="page-header">
-            <h1>Our Services</h1>
-            <p>Comprehensive precast concrete solutions for every commercial need</p>
-        </div>
-
-        <div class="services-container">
-            <div class="service-card" id="svc-commercial">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=400&fit=crop&q=80" alt="Commercial Construction" class="service-card-img">
-                <h3>Commercial Construction</h3>
-                <p>From concept to completion, we deliver professional commercial construction services. Our team specializes in large-scale projects that require precision, reliability, and expert management. We work with architects and developers to bring your commercial visions to life.</p>
-                <ul class="service-features">
-                    <li>Project planning & design coordination</li>
-                    <li>Multi-stage construction management</li>
-                    <li>Quality assurance at every phase</li>
-                    <li>Safety compliance & certifications</li>
-                </ul>
+    <!-- ===========================
+         STATS BAR
+    =========================== -->
+    <section class="stats-bar" id="statsBar">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value"><span class="count" data-target="150">0</span><span class="stat-sym">+</span></div>
+                <p>Commercial Projects Delivered</p>
             </div>
-
-            <div class="service-card" id="svc-warehouse">
-                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=400&fit=crop&q=80" alt="Warehouse Buildings" class="service-card-img">
-                <h3>Warehouse Buildings</h3>
-                <p>Build efficient, scalable warehouse spaces designed for modern logistics and storage needs. Our warehouse solutions feature robust construction, optimal space utilization, and compliance with all building codes and safety standards.</p>
-                <ul class="service-features">
-                    <li>Modern warehouse design</li>
-                    <li>Flexible layout options</li>
-                    <li>High-load bearing capacity</li>
-                    <li>Efficient climate control integration</li>
-                </ul>
+            <div class="stat-item">
+                <div class="stat-value"><span class="count" data-target="15">0</span><span class="stat-sym">+</span></div>
+                <p>Years in Melbourne</p>
             </div>
-
-            <div class="service-card" id="svc-precast">
-                <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=400&fit=crop&q=80" alt="Precast Panels" class="service-card-img">
-                <h3>Precast Panels</h3>
-                <p>Premium prefabricated panel systems for faster construction and superior quality control. Our precast panels are manufactured to exact specifications, reducing on-site work and minimizing project timelines while maintaining exceptional durability.</p>
-                <ul class="service-features">
-                    <li>Factory-quality manufacturing</li>
-                    <li>Custom dimensions available</li>
-                    <li>Reduced construction time</li>
-                    <li>Enhanced structural integrity</li>
-                </ul>
+            <div class="stat-value-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value"><span class="count" data-target="98">0</span><span class="stat-sym">%</span></div>
+                <p>On-Time Delivery Rate</p>
             </div>
-
-            <div class="service-card" id="svc-onsite">
-                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=400&fit=crop&q=80" alt="Onsite Panels" class="service-card-img">
-                <h3>Onsite Panels</h3>
-                <p>Custom precast panel fabrication directly on your construction site. This approach offers maximum flexibility, reduces transportation costs, and allows for real-time adjustments based on site conditions and project requirements.</p>
-                <ul class="service-features">
-                    <li>On-location fabrication</li>
-                    <li>Real-time customization</li>
-                    <li>Reduced transport costs</li>
-                    <li>Immediate installation capability</li>
-                </ul>
-            </div>
-
-            <div class="service-card" id="svc-excavation">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=400&fit=crop&q=80" alt="Bulk Excavation" class="service-card-img">
-                <h3>Bulk Excavation Operations</h3>
-                <p>Professional excavation and bulk earthmoving services to prepare your site for construction. We handle everything from site clearing to foundation preparation, using modern equipment and experienced operators to ensure efficient project completion.</p>
-                <ul class="service-features">
-                    <li>Site clearing & preparation</li>
-                    <li>Foundation excavation</li>
-                    <li>Soil management</li>
-                    <li>Environmental compliance</li>
-                </ul>
+            <div class="stat-item">
+                <div class="stat-value"><span class="count" data-target="0">0</span></div>
+                <p>Missed Handover Dates</p>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY PAGE -->
-    <section id="gallery" class="page">
-        <div class="page-header">
-            <h1>Project Gallery</h1>
-            <p>Showcasing our finest commercial construction work</p>
+    <!-- ===========================
+         PROBLEM SECTION
+    =========================== -->
+    <section class="problem-section">
+        <div class="section-wrap">
+            <p class="eyebrow">The Real Cost of the Wrong Concrete Partner</p>
+            <h2 class="problem-heading">
+                Most developers lose 3–6 weeks<br>waiting on a precast supplier<br>who wasn't ready.
+            </h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-num">01</span>
+                    <h3>Delays compound fast</h3>
+                    <p>A two-day panel delivery slip cascades into a two-week site shutdown. Trades standing idle. Costs bleeding. Your handover date disappears.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-num">02</span>
+                    <h3>Off-spec work kills margins</h3>
+                    <p>Poor quality control at the source means expensive remediation on-site. Panels the wrong dimension. Connections that don't match. Rework nobody budgeted for.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-num">03</span>
+                    <h3>No single point of contact</h3>
+                    <p>Design gets blamed by production. Production gets blamed by delivery. By the time there's a problem, nobody owns it — and you're holding the cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         SERVICES — VERTICAL SCROLL
+    =========================== -->
+    <section class="services-section" id="services-section">
+        <div class="services-header section-wrap">
+            <p class="eyebrow">What We Do</p>
+            <h2>End-to-end commercial concrete.<br>One team. Zero handover gaps.</h2>
+            <p class="section-sub">From design co-ordination through to installation — we own every step so nothing falls through the cracks.</p>
         </div>
 
+        <!-- 01 Precast Wall Panels -->
+        <div class="svc-row" data-dir="left">
+            <div class="svc-img">
+                <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=900&h=620&fit=crop&q=80" alt="Precast wall panels being installed">
+            </div>
+            <div class="svc-body">
+                <span class="svc-tag">01 — Precast Wall Panels</span>
+                <h3>Factory precision.<br>Site-ready in days.</h3>
+                <p>Our tilt-up and off-site fabricated wall panels are cast in a controlled environment to exact tolerances — eliminating on-site formwork, reducing wet trades, and cutting wall installation time by up to 60%.</p>
+                <ul class="svc-list">
+                    <li>Tilt-up and off-site fabricated systems</li>
+                    <li>Custom dimensions, textures &amp; finishes</li>
+                    <li>Structural and architectural panel options</li>
+                    <li>NCC-compliant fire &amp; acoustic ratings</li>
+                </ul>
+                <a href="#contact-section" class="btn-outline">Request Panel Quote</a>
+            </div>
+        </div>
+
+        <!-- 02 Warehouse Construction -->
+        <div class="svc-row flip" data-dir="right">
+            <div class="svc-body">
+                <span class="svc-tag">02 — Warehouse &amp; Industrial Construction</span>
+                <h3>Built for scale.<br>Engineered to last 50 years.</h3>
+                <p>Modern logistics demands buildings that carry the load. Our warehouse builds use precast structural systems for maximum clear-span space, faster completion, and proven durability under heavy operational use.</p>
+                <ul class="svc-list">
+                    <li>High-bay and distribution centre builds</li>
+                    <li>Tilt-panel warehouse systems</li>
+                    <li>High load-bearing floor slabs</li>
+                    <li>Dock, entry and mezzanine integration</li>
+                </ul>
+                <a href="#contact-section" class="btn-outline">Discuss Your Project</a>
+            </div>
+            <div class="svc-img">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=900&h=620&fit=crop&q=80" alt="Warehouse construction">
+            </div>
+        </div>
+
+        <!-- 03 Structural Elements -->
+        <div class="svc-row" data-dir="left">
+            <div class="svc-img">
+                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=900&h=620&fit=crop&q=80" alt="Structural columns and beams">
+            </div>
+            <div class="svc-body">
+                <span class="svc-tag">03 — Structural Columns &amp; Beams</span>
+                <h3>Precision-engineered.<br>Structurally certified.</h3>
+                <p>Our precast structural elements — columns, beams and hollowcore slabs — are manufactured to AS 3600 standards and delivered with full certification. Every element arrives dimensionally correct, ready to place.</p>
+                <ul class="svc-list">
+                    <li>Precast columns, I-beams and T-beams</li>
+                    <li>Hollowcore floor and roof planks</li>
+                    <li>Prestressed structural elements</li>
+                    <li>Engineer-certified shop drawings provided</li>
+                </ul>
+                <a href="#contact-section" class="btn-outline">Get Structural Quote</a>
+            </div>
+        </div>
+
+        <!-- 04 Architectural Facades -->
+        <div class="svc-row flip" data-dir="right">
+            <div class="svc-body">
+                <span class="svc-tag">04 — Architectural Facades</span>
+                <h3>The face of your building.<br>Built to make a statement.</h3>
+                <p>Precast concrete isn't just structural — it's architectural. We produce custom facade panels with exposed aggregate, board-form, sandblasted and smooth finishes that transform commercial buildings into landmarks.</p>
+                <ul class="svc-list">
+                    <li>Custom texture, colour &amp; finish options</li>
+                    <li>Insulated sandwich panel systems</li>
+                    <li>Integration with curtain wall and glazing</li>
+                    <li>Stain-resistant sealed finishes available</li>
+                </ul>
+                <a href="#contact-section" class="btn-outline">Explore Facade Options</a>
+            </div>
+            <div class="svc-img">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&h=620&fit=crop&q=80" alt="Commercial facade">
+            </div>
+        </div>
+
+        <!-- 05 Bulk Excavation -->
+        <div class="svc-row" data-dir="left">
+            <div class="svc-img">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&h=620&fit=crop&q=80" alt="Bulk excavation">
+            </div>
+            <div class="svc-body">
+                <span class="svc-tag">05 — Bulk Excavation &amp; Site Prep</span>
+                <h3>Site ready.<br>Before anyone else shows up.</h3>
+                <p>Complete bulk excavation and site preparation services — so your project starts on solid ground. Working alongside our precast teams means zero handover gaps between groundworks and structure.</p>
+                <ul class="svc-list">
+                    <li>Bulk earthworks and rock removal</li>
+                    <li>Retention systems and bored pier walls</li>
+                    <li>Foundation excavation and benching</li>
+                    <li>EPA-compliant soil management and disposal</li>
+                </ul>
+                <a href="#contact-section" class="btn-outline">Get Site Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         PROCESS
+    =========================== -->
+    <section class="process-section">
+        <div class="section-wrap">
+            <p class="eyebrow">How It Works</p>
+            <h2>Three steps from brief to build.</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Discovery Call</h3>
+                    <p>We review your plans, site conditions and timeline. You walk away with a clear scope and a fixed price — no surprises, no qualifications.</p>
+                </div>
+                <div class="process-arrow"></div>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Design &amp; Engineer</h3>
+                    <p>Our team co-ordinates with your architect and structural engineer to finalise panel layouts, connection details and production schedules.</p>
+                </div>
+                <div class="process-arrow"></div>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Manufacture &amp; Install</h3>
+                    <p>Panels are cast under controlled conditions, delivered to programme, and installed by our crew. One team. One point of accountability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         GALLERY
+    =========================== -->
+    <section class="gallery-section" id="gallery-section">
+        <div class="section-wrap">
+            <p class="eyebrow">Project Gallery</p>
+            <h2>The work speaks for itself.</h2>
+        </div>
         <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&q=80" alt="Large scale construction site" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&q=80" alt="Commercial building" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop&q=80" alt="Warehouse facility" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&h=400&fit=crop&q=80" alt="Construction team onsite" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&q=80" alt="Excavation operations" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600&h=400&fit=crop&q=80" alt="Precast concrete panels" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&h=400&fit=crop&q=80" alt="Industrial structure steel" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop&q=80" alt="Steel frame construction" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop&q=80" alt="Building exterior facade" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=600&h=400&fit=crop&q=80" alt="Concrete pour operation" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&q=80" alt="Modern architecture" class="gallery-item" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop&q=80" alt="Urban commercial construction" class="gallery-item" loading="lazy">
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=500&fit=crop&q=80" alt="Construction site" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&h=500&fit=crop&q=80" alt="Commercial building" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&h=500&fit=crop&q=80" alt="Warehouse facility" loading="lazy"></div>
+            <div class="g-item g-wide"><img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=1200&h=500&fit=crop&q=80" alt="Construction crew" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&h=500&fit=crop&q=80" alt="Excavation" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=700&h=500&fit=crop&q=80" alt="Precast panels" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=700&h=500&fit=crop&q=80" alt="Steel structure" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&h=500&fit=crop&q=80" alt="Steel frame" loading="lazy"></div>
+            <div class="g-item"><img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=700&h=500&fit=crop&q=80" alt="Concrete work" loading="lazy"></div>
         </div>
     </section>
 
-    <!-- ABOUT PAGE -->
-    <section id="about" class="page">
-        <div class="page-header">
-            <h1>About Southwest Precast</h1>
-            <p>Leading commercial construction specialists in Melbourne</p>
-        </div>
-
-        <div class="about-content">
-            <div class="about-section">
-                <h2>Our Story</h2>
-                <p>Southwest Precast Concrete was founded on the principle that quality construction requires expertise, dedication, and integrity. For over 15 years, we've been Melbourne's trusted partner for commercial construction and precast concrete solutions. What started as a small local operation has grown into a respected industry leader, known for delivering exceptional results on complex, large-scale projects.</p>
-                <p>Our success is built on the foundation of understanding our clients' needs and exceeding expectations on every project. We've earned the trust of developers, architects, and contractors across Melbourne through our unwavering commitment to quality, safety, and on-time delivery.</p>
-            </div>
-
-            <div class="about-section">
-                <h2>Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <h3>Excellence</h3>
-                        <p>We pursue perfection in every detail, from design through final delivery</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Integrity</h3>
-                        <p>Honest communication and transparent dealings with all stakeholders</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Safety</h3>
-                        <p>Zero-tolerance approach to workplace safety and risk management</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Innovation</h3>
-                        <p>Continuously adopting new methods and technologies in construction</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Sustainability</h3>
-                        <p>Environmental responsibility in all our operations and practices</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>Reliability</h3>
-                        <p>Delivering on promises, meeting deadlines, and standing behind our work</p>
-                    </div>
+    <!-- ===========================
+         ABOUT
+    =========================== -->
+    <section class="about-section" id="about-section">
+        <div class="about-inner">
+            <div class="about-text">
+                <p class="eyebrow">Who We Are</p>
+                <h2>Melbourne's precast specialists.<br>15 years. Zero missed handovers.</h2>
+                <p>Southwest Precast was built around one principle: a construction project should never stall because of its concrete supplier. We've spent 15 years building the systems, the crew, and the production capacity to guarantee exactly that.</p>
+                <p>We work with developers, head contractors and architects across Melbourne — from tilt-up warehouses to architecturally complex commercial facades. If concrete is a critical path item on your project, we're the team that removes the risk.</p>
+                <div class="credentials">
+                    <div class="cred">Registered Builder — CDB-U</div>
+                    <div class="cred">AS 3600 Certified Concrete</div>
+                    <div class="cred">ISO 9001 Quality Management</div>
+                    <div class="cred">WorkSafe Victoria Compliant</div>
                 </div>
             </div>
-
-            <div class="about-section">
-                <h2>Why We're Different</h2>
-                <div class="difference-grid">
-                    <div class="difference-item">
-                        <div class="diff-number">1</div>
-                        <h3>Specialization</h3>
-                        <p>We specialize exclusively in commercial precast concrete construction, giving us deep expertise in this specific field.</p>
-                    </div>
-                    <div class="difference-item">
-                        <div class="diff-number">2</div>
-                        <h3>Local Knowledge</h3>
-                        <p>Our 15 years in Melbourne mean we understand local building codes, suppliers, and project nuances.</p>
-                    </div>
-                    <div class="difference-item">
-                        <div class="diff-number">3</div>
-                        <h3>Technology</h3>
-                        <p>We invest in modern equipment and software to optimize quality and efficiency on every project.</p>
-                    </div>
-                    <div class="difference-item">
-                        <div class="diff-number">4</div>
-                        <h3>Team</h3>
-                        <p>Our engineers, managers, and tradespeople are among the best in the industry with proven track records.</p>
-                    </div>
-                </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&h=700&fit=crop&q=80" alt="Southwest Precast team on site">
             </div>
         </div>
     </section>
 
-    <!-- CONTACT PAGE -->
-    <section id="contact" class="page">
-        <div class="page-header">
-            <h1>Get In Touch</h1>
-            <p>Ready to start your next commercial construction project?</p>
-        </div>
-
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p><a href="tel:+61430343388">+61 430 343 388</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>Melbourne, Victoria, Australia</p>
-                </div>
-                <div class="contact-item">
-                    <h3>✉️ Email</h3>
-                    <p><a href="mailto:info@southwestprecast.com.au">info@southwestprecast.com.au</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>💼 Services</h3>
-                    <p>Commercial Construction<br>Warehouse Buildings<br>Precast Panels<br>Onsite Panels<br>Bulk Excavation</p>
+    <!-- ===========================
+         CONTACT
+    =========================== -->
+    <section class="contact-section" id="contact-section">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <p class="eyebrow">Start Your Project</p>
+                <h2>Tell us about your project.<br>We respond within 24 hours.</h2>
+                <p>No obligation. No sales pitch. Just a direct conversation about whether we're the right fit for your project.</p>
+                <div class="contact-details">
+                    <div class="c-detail">
+                        <span class="c-label">Phone</span>
+                        <a href="tel:+61430343388">+61 430 343 388</a>
+                    </div>
+                    <div class="c-detail">
+                        <span class="c-label">Email</span>
+                        <a href="mailto:info@southwestprecast.com.au">info@southwestprecast.com.au</a>
+                    </div>
+                    <div class="c-detail">
+                        <span class="c-label">Location</span>
+                        <span>Melbourne, Victoria, Australia</span>
+                    </div>
                 </div>
             </div>
 
             <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="John Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Smith Developments">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="john@smithdev.com.au" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interest *</label>
+                    <label for="service">Service Required *</label>
                     <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="commercial">Commercial Construction</option>
-                        <option value="warehouse">Warehouse Buildings</option>
-                        <option value="precast">Precast Panels</option>
-                        <option value="onsite">Onsite Panels</option>
-                        <option value="excavation">Bulk Excavation</option>
+                        <option value="">Select a service...</option>
+                        <option value="precast-panels">Precast Wall Panels</option>
+                        <option value="warehouse">Warehouse &amp; Industrial Construction</option>
+                        <option value="structural">Structural Columns &amp; Beams</option>
+                        <option value="facade">Architectural Facades</option>
+                        <option value="excavation">Bulk Excavation &amp; Site Prep</option>
+                        <option value="full-build">Full Commercial Build</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Project Details *</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+                    <label for="message">Project Brief *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project — size, location, timeline, and any specific requirements..." required></textarea>
                 </div>
-                <button type="submit" class="cta-button">Send Inquiry</button>
-                <p class="form-note">* Required fields. We'll respond within 24 hours.</p>
+                <button type="submit" class="btn-primary btn-full" id="submitBtn">Send Project Brief</button>
+                <p class="form-note">We respond within 24 hours. No spam, ever.</p>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===========================
+         FOOTER
+    =========================== -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Southwest Precast Concrete</h4>
-                <p>Premium commercial construction and precast concrete solutions for Melbourne</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="https://v3b.fal.media/files/b/0a9ddf81/LWu-SP8dgXZ_KQg7-S0Hw_8wkccIZK.png" alt="Southwest Precast" class="footer-logo">
+                <p>Premium precast concrete and commercial construction across Melbourne, Victoria.</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
+            <div class="footer-col">
+                <h5>Services</h5>
                 <ul>
-                    <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
-                    <li><a href="#services" onclick="navigateTo('services')">Services</a></li>
-                    <li><a href="#gallery" onclick="navigateTo('gallery')">Gallery</a></li>
-                    <li><a href="#about" onclick="navigateTo('about')">About</a></li>
-                    <li><a href="#contact" onclick="navigateTo('contact')">Contact</a></li>
+                    <li><a href="#services-section">Precast Wall Panels</a></li>
+                    <li><a href="#services-section">Warehouse Construction</a></li>
+                    <li><a href="#services-section">Structural Elements</a></li>
+                    <li><a href="#services-section">Architectural Facades</a></li>
+                    <li><a href="#services-section">Bulk Excavation</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📞 <a href="tel:+61430343388">+61 430 343 388</a></p>
-                <p>📍 Melbourne, Victoria</p>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#about-section">About Us</a></li>
+                    <li><a href="#gallery-section">Project Gallery</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <p><a href="tel:+61430343388">+61 430 343 388</a></p>
+                <p><a href="mailto:info@southwestprecast.com.au">info@southwestprecast.com.au</a></p>
+                <p>Melbourne, Victoria</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Southwest Precast Concrete. All rights reserved.</p>
+            <p>&copy; 2025 Southwest Precast Concrete Pty Ltd. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- GSAP + ScrollTrigger (CDN, free) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
