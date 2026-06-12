@@ -713,7 +713,8 @@ textarea { resize: vertical; min-height: 120px; }
     .g-wide { grid-column: span 1; }
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
     .contact-form { padding: 24px; }
-    .credentials { gap: 8px; }\n}
+    .credentials { gap: 8px; }
+}
 
 /* ── WHATSAPP FLOAT ── */
 .wa-float {
